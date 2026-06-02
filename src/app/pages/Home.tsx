@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { useTheme, themes, ThemeId } from "../context/ThemeContext";
 import homeImage1 from "../../imports/Screenshot_2026-05-13_at_16.38.57-1.png";
 import homeImage2 from "../../imports/IMG_8907-1.jpg";
-import scrollImage1 from "../../imports/IMG_8150_3.jpg";
 import scrollImage2 from "../../imports/IMG_8117_3.jpg";
 import scrollImage3 from "../../imports/IMG_8203.jpg";
 import scrollImage4 from "../../imports/IMG_8907_2.jpg";
@@ -17,7 +16,6 @@ export default function Home() {
   const { theme, setThemeId } = useTheme();
 
   const scrollingImages = [
-    scrollImage1,
     scrollImage2,
     scrollImage3,
     scrollImage4,
