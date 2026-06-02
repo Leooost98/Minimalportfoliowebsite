@@ -2,10 +2,10 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Link } from "react-router";
 import { useEffect, useRef, useState } from "react";
 import { useTheme, themes, ThemeId } from "../context/ThemeContext";
-// Import placeholder until real images are uploaded
-import placeholder from "../../imports/placeholder.svg";
+// Numbered placeholders showing which image goes where
+import { createPlaceholder } from "../components/NumberedPlaceholder";
 
-// Original image imports - will work once images are uploaded to src/imports/
+// Original image imports - uncomment after uploading images to src/imports/
 // import scrollImage1 from "../../imports/IMG_8150_3.jpg";
 // import scrollImage2 from "../../imports/IMG_8117_3.jpg";
 // import scrollImage3 from "../../imports/IMG_8203.jpg";
@@ -14,13 +14,13 @@ import placeholder from "../../imports/placeholder.svg";
 // import scrollImage6 from "../../imports/Leo_vd_Oost_2-3.jpg";
 // import scrollImage7 from "../../imports/IMG_0130.PNG";
 
-const scrollImage1 = placeholder;
-const scrollImage2 = placeholder;
-const scrollImage3 = placeholder;
-const scrollImage4 = placeholder;
-const scrollImage5 = placeholder;
-const scrollImage6 = placeholder;
-const scrollImage7 = placeholder;
+const scrollImage1 = createPlaceholder("IMG_8150_3.jpg", 1);
+const scrollImage2 = createPlaceholder("IMG_8117_3.jpg", 2);
+const scrollImage3 = createPlaceholder("IMG_8203.jpg", 3);
+const scrollImage4 = createPlaceholder("IMG_8907_2.jpg", 4);
+const scrollImage5 = createPlaceholder("Screenshot_2026-05-13_at_16.38.57-2.png", 5);
+const scrollImage6 = createPlaceholder("Leo_vd_Oost_2-3.jpg", 6);
+const scrollImage7 = createPlaceholder("IMG_0130.PNG", 7);
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);

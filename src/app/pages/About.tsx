@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { useTheme, themes, ThemeId, ABOUT_TEXT_COLOR } from "../context/ThemeContext";
+import { createPlaceholder } from "../components/NumberedPlaceholder";
 
-// Placeholder until real image is uploaded
-import placeholder from "../../imports/placeholder.svg";
-// Original: import profileImage from "../../imports/4b1fa4ff-c376-419a-a05e-42b04e80527e_2.jpg";
-const profileImage = placeholder;
+// Numbered placeholder showing which image goes where
+// Uncomment after uploading: import profileImage from "../../imports/4b1fa4ff-c376-419a-a05e-42b04e80527e_2.jpg";
+const profileImage = createPlaceholder("4b1fa4ff-c376-419a-a05e-42b04e80527e_2.jpg", 133);
 
 export default function About() {
   const { theme, setThemeId } = useTheme();
