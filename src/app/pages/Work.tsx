@@ -2,131 +2,21 @@ import { ProjectRow } from "../components/ProjectRow";
 import { Link, useParams } from "react-router";
 import { useTheme, themes, ThemeId } from "../context/ThemeContext";
 import { useEffect, useRef, useState } from "react";
-import interior1 from "../../imports/Leo_vd_Oost-2.jpg";
-import interior2 from "../../imports/Leo_vd_Oost_3-2.jpg";
-import interior3 from "../../imports/Leo_vd_Oost_2-2.jpg";
-import interior4 from "../../imports/Leo_vd_Oost_1-2.jpg";
-import skirt1 from "../../imports/IMG_8111_2.jpg";
-import skirt2 from "../../imports/tempImagegYuQXh.png";
-import skirt3 from "../../imports/IMG_8112_2.jpg";
-import skirt4 from "../../imports/IMG_8123_2.jpg";
-import skirt5 from "../../imports/IMG_8120.jpg";
-import skirt6 from "../../imports/IMG_8122_2.jpg";
-import skirt7 from "../../imports/IMG_8121_2.jpg";
-import skirt8 from "../../imports/IMG_8117_2.jpg";
-import skirt9 from "../../imports/IMG_8119_2.jpg";
-import skirt10 from "../../imports/IMG_8118_2.jpg";
-import skirt11 from "../../imports/Screenshot_2026-06-01_at_19.56.38.png";
-import skirt12 from "../../imports/Screenshot_2026-06-01_at_19.56.52.png";
-import skirt13 from "../../imports/Screenshot_2026-06-01_at_19.48.10.png";
-import pattern1 from "../../imports/Screenshot_2026-06-01_at_20.40.03.png";
-import pattern2 from "../../imports/Screenshot_2026-06-01_at_20.40.17.png";
-import pattern3 from "../../imports/Screenshot_2026-06-01_at_20.40.27.png";
-import pattern4 from "../../imports/Screenshot_2026-06-01_at_20.40.40.png";
-import pattern5 from "../../imports/Screenshot_2026-06-01_at_20.34.13-1.png";
-import pattern6 from "../../imports/Screenshot_2026-06-01_at_20.34.30-1.png";
-import pattern7 from "../../imports/Screenshot_2026-06-01_at_20.34.45-1.png";
-import pattern8 from "../../imports/Screenshot_2026-06-01_at_20.41.00.png";
-import pattern9 from "../../imports/Screenshot_2026-06-01_at_20.41.14.png";
-import pattern10 from "../../imports/Screenshot_2026-06-01_at_20.41.27.png";
-import pattern11 from "../../imports/Screenshot_2026-06-01_at_20.41.39.png";
-import pattern12 from "../../imports/Screenshot_2026-06-01_at_20.46.45.png";
-import pattern13 from "../../imports/Screenshot_2026-06-01_at_20.47.00.png";
-import pattern14 from "../../imports/IMG_0113.PNG";
-import pattern15 from "../../imports/IMG_0114.PNG";
-import pattern16 from "../../imports/IMG_0115.PNG";
-import pattern17 from "../../imports/IMG_0116.PNG";
-import pattern18 from "../../imports/IMG_0117.PNG";
-import pattern19 from "../../imports/IMG_0119.PNG";
-import pattern20 from "../../imports/IMG_0122.PNG";
-import pattern21 from "../../imports/IMG_0123.PNG";
-import pattern22 from "../../imports/IMG_0124.PNG";
-import pattern23 from "../../imports/IMG_0129.PNG";
-import pattern24 from "../../imports/IMG_0126-1.PNG";
-import pattern25 from "../../imports/IMG_0127.PNG";
-import pattern26 from "../../imports/IMG_0128.PNG";
-import product1 from "../../imports/IMG_0085.jpg";
-import product2 from "../../imports/IMG_0087.jpg";
-import product3 from "../../imports/IMG_0086.jpg";
-import product4 from "../../imports/IMG_8149_2.jpg";
-import product5 from "../../imports/IMG_8150_2.jpg";
-import product6 from "../../imports/IMG_8153.jpg";
-import product7 from "../../imports/Screenshot_2026-06-01_at_19.07.42.png";
-import product8 from "../../imports/Screenshot_2026-06-01_at_19.08.21.png";
-import product9 from "../../imports/Screenshot_2026-06-01_at_19.08.29.png";
-import product10 from "../../imports/Screenshot_2026-06-01_at_19.31.27.png";
-import product11 from "../../imports/Screenshot_2026-06-01_at_19.10.43.png";
-import product12 from "../../imports/Screenshot_2026-06-01_at_19.24.40.png";
-import product13 from "../../imports/Screenshot_2026-06-01_at_19.24.50.png";
-import product14 from "../../imports/Screenshot_2026-06-01_at_19.30.10.png";
-import product15 from "../../imports/Screenshot_2026-06-01_at_19.58.24.png";
-import product16 from "../../imports/Screenshot_2026-06-01_at_19.56.13.png";
-import product17 from "../../imports/Screenshot_2026-06-01_at_19.56.02.png";
-import fashion1 from "../../imports/IMG_8214_2.jpg";
-import fashion2 from "../../imports/IMG_8212_2.jpg";
-import fashion3 from "../../imports/IMG_8211_2.jpg";
-import fashion4 from "../../imports/IMG_8198_3.jpg";
-import fashion5 from "../../imports/IMG_8202_3.jpg";
-import fashion6 from "../../imports/IMG_8201_4.jpg";
-import fashion7 from "../../imports/IMG_8200_4.jpg";
-import fashion8 from "../../imports/Screenshot_2026-06-01_at_19.44.26.png";
-import fashion9 from "../../imports/Screenshot_2026-06-01_at_19.44.48.png";
-import landscape1 from "../../imports/tempImageopJUlG.png";
-import landscape2 from "../../imports/Screenshot_2026-05-17_at_09.07.48.png";
-import landscape3 from "../../imports/IMG_8899-1.jpg";
-import landscape4 from "../../imports/IMG_8883_3-2.jpg";
-import landscape5 from "../../imports/IMG_8874_2-2.jpg";
-import landscape6 from "../../imports/IMG_8655_2-1.jpg";
-import landscape7 from "../../imports/IMG_8654_2-2.jpg";
-import landscape8 from "../../imports/IMG_8652_3-1.jpg";
-import landscape9 from "../../imports/IMG_6498_2-1.jpg";
-import landscape10 from "../../imports/IMG_6497_2-1.jpg";
-import urban1 from "../../imports/Screenshot_2026-05-13_at_16.37.30.png";
-import urban2 from "../../imports/Screenshot_2026-05-13_at_16.37.41.png";
-import urban3 from "../../imports/Screenshot_2026-05-13_at_16.36.20.png";
-import urban4 from "../../imports/Screenshot_2026-05-13_at_16.38.22.png";
-import urban5 from "../../imports/Screenshot_2026-05-13_at_16.38.34.png";
-import urban6 from "../../imports/Screenshot_2026-05-13_at_16.36.42.png";
-import urban7 from "../../imports/Screenshot_2026-05-13_at_16.39.11.png";
-import urban8 from "../../imports/Screenshot_2026-05-13_at_16.38.57.png";
-import urban9 from "../../imports/Screenshot_2026-05-13_at_16.35.48.png";
-import urban10 from "../../imports/Screenshot_2026-05-13_at_16.39.34.png";
-import urban11 from "../../imports/Screenshot_2026-05-13_at_16.39.52.png";
-import urban12 from "../../imports/Screenshot_2026-05-13_at_16.35.32.png";
-import urban13 from "../../imports/Screenshot_2026-05-13_at_16.41.00.png";
-import urban14 from "../../imports/Screenshot_2026-05-13_at_16.40.40.png";
-import urban15 from "../../imports/Screenshot_2026-05-13_at_16.36.08.png";
-import urban16 from "../../imports/Screenshot_2026-05-13_at_16.32.55.png";
-import urban17 from "../../imports/Screenshot_2026-05-13_at_16.33.06.png";
-import urban18 from "../../imports/Screenshot_2026-05-13_at_16.34.20.png";
-import urban19 from "../../imports/Screenshot_2026-05-13_at_16.34.06.png";
-import urban20 from "../../imports/Screenshot_2026-05-13_at_16.33.21.png";
-import clo1 from "../../imports/IMG_9663_2.jpg";
-import clo2 from "../../imports/IMG_9660_2.jpg";
-import clo3 from "../../imports/IMG_9656_2.jpg";
-import clo4 from "../../imports/Screenshot_2026-05-24_at_23.45.38.png";
-import clo5 from "../../imports/DSC05791.JPG";
-import clo6 from "../../imports/Screenshot_2026-05-24_at_23.46.18.png";
-import clo7 from "../../imports/IMG_9635.jpg";
-import clo8 from "../../imports/IMG_9638.jpg";
-import sleeve1 from "../../imports/Untitled_design-1.jpg";
-import sleeve2 from "../../imports/Untitled_design-3-1.jpg";
-import sleeve3 from "../../imports/Untitled_design-2-1.jpg";
-import sleeve4 from "../../imports/Untitled_design-4.jpg";
-import sleeve5 from "../../imports/Untitled_design-6.jpg";
-import sleeve6 from "../../imports/Untitled_design-5.jpg";
-import sleeve7 from "../../imports/Untitled_design-7.jpg";
-import sleeve8 from "../../imports/Untitled_design-8.jpg";
-import sleeve9 from "../../imports/Screenshot_2026-06-01_at_22.49.23.png";
-import sleeve10 from "../../imports/Screenshot_2026-06-01_at_22.48.56.png";
-import sleeve11 from "../../imports/Screenshot_2026-06-01_at_22.49.08.png";
-import jeans1 from "../../imports/Untitled_design-9.jpg";
-import jeans2 from "../../imports/Untitled_design-10.jpg";
-import jeans3 from "../../imports/Untitled_design-11.jpg";
-import jeans4 from "../../imports/Untitled_design-12.jpg";
-import jeans5 from "../../imports/IMG_0088.jpg";
-import jeans6 from "../../imports/IMG_0091.jpg";
-import jeans7 from "../../imports/jhb.png";
+
+// Placeholder until real images are uploaded
+import placeholder from "../../imports/placeholder.svg";
+
+// Using placeholders for all images - uncomment and replace after uploading real images to src/imports/
+const interior1 = placeholder, interior2 = placeholder, interior3 = placeholder, interior4 = placeholder;
+const skirt1 = placeholder, skirt2 = placeholder, skirt3 = placeholder, skirt4 = placeholder, skirt5 = placeholder, skirt6 = placeholder, skirt7 = placeholder, skirt8 = placeholder, skirt9 = placeholder, skirt10 = placeholder, skirt11 = placeholder, skirt12 = placeholder, skirt13 = placeholder;
+const pattern1 = placeholder, pattern2 = placeholder, pattern3 = placeholder, pattern4 = placeholder, pattern5 = placeholder, pattern6 = placeholder, pattern7 = placeholder, pattern8 = placeholder, pattern9 = placeholder, pattern10 = placeholder, pattern11 = placeholder, pattern12 = placeholder, pattern13 = placeholder, pattern14 = placeholder, pattern15 = placeholder, pattern16 = placeholder, pattern17 = placeholder, pattern18 = placeholder, pattern19 = placeholder, pattern20 = placeholder, pattern21 = placeholder, pattern22 = placeholder, pattern23 = placeholder, pattern24 = placeholder, pattern25 = placeholder, pattern26 = placeholder;
+const product1 = placeholder, product2 = placeholder, product3 = placeholder, product4 = placeholder, product5 = placeholder, product6 = placeholder, product7 = placeholder, product8 = placeholder, product9 = placeholder, product10 = placeholder, product11 = placeholder, product12 = placeholder, product13 = placeholder, product14 = placeholder, product15 = placeholder, product16 = placeholder, product17 = placeholder;
+const fashion1 = placeholder, fashion2 = placeholder, fashion3 = placeholder, fashion4 = placeholder, fashion5 = placeholder, fashion6 = placeholder, fashion7 = placeholder, fashion8 = placeholder, fashion9 = placeholder;
+const landscape1 = placeholder, landscape2 = placeholder, landscape3 = placeholder, landscape4 = placeholder, landscape5 = placeholder, landscape6 = placeholder, landscape7 = placeholder, landscape8 = placeholder, landscape9 = placeholder, landscape10 = placeholder;
+const urban1 = placeholder, urban2 = placeholder, urban3 = placeholder, urban4 = placeholder, urban5 = placeholder, urban6 = placeholder, urban7 = placeholder, urban8 = placeholder, urban9 = placeholder, urban10 = placeholder, urban11 = placeholder, urban12 = placeholder, urban13 = placeholder, urban14 = placeholder, urban15 = placeholder, urban16 = placeholder, urban17 = placeholder, urban18 = placeholder, urban19 = placeholder, urban20 = placeholder;
+const clo1 = placeholder, clo2 = placeholder, clo3 = placeholder, clo4 = placeholder, clo5 = placeholder, clo6 = placeholder, clo7 = placeholder, clo8 = placeholder;
+const sleeve1 = placeholder, sleeve2 = placeholder, sleeve3 = placeholder, sleeve4 = placeholder, sleeve5 = placeholder, sleeve6 = placeholder, sleeve7 = placeholder, sleeve8 = placeholder, sleeve9 = placeholder, sleeve10 = placeholder, sleeve11 = placeholder;
+const jeans1 = placeholder, jeans2 = placeholder, jeans3 = placeholder, jeans4 = placeholder, jeans5 = placeholder, jeans6 = placeholder, jeans7 = placeholder;
 
 export default function Work() {
   const { theme, setThemeId } = useTheme();
@@ -268,6 +158,7 @@ export default function Work() {
     };
   }, []);
 
+  // Each project includes original photo filenames preserved in the 'filenames' array
   const projects = [
     {
       id: "womens-shirt-shawl-collar",
@@ -293,6 +184,25 @@ export default function Work() {
         product13,
         product14,
       ],
+      filenames: [
+        "IMG_0085.jpg",
+        "IMG_0087.jpg",
+        "IMG_0086.jpg",
+        "IMG_8149_2.jpg",
+        "IMG_8150_2.jpg",
+        "IMG_8153.jpg",
+        "Screenshot_2026-06-01_at_19.58.24.png",
+        "Screenshot_2026-06-01_at_19.56.13.png",
+        "Screenshot_2026-06-01_at_19.56.02.png",
+        "Screenshot_2026-06-01_at_19.07.42.png",
+        "Screenshot_2026-06-01_at_19.08.21.png",
+        "Screenshot_2026-06-01_at_19.08.29.png",
+        "Screenshot_2026-06-01_at_19.31.27.png",
+        "Screenshot_2026-06-01_at_19.10.43.png",
+        "Screenshot_2026-06-01_at_19.24.40.png",
+        "Screenshot_2026-06-01_at_19.24.50.png",
+        "Screenshot_2026-06-01_at_19.30.10.png",
+      ],
     },
     {
       id: "18th-century-stays",
@@ -310,6 +220,18 @@ export default function Work() {
         landscape7,
         landscape9,
         landscape10,
+      ],
+      filenames: [
+        "tempImageopJUlG.png",
+        "IMG_8899-1.jpg",
+        "Screenshot_2026-05-17_at_09.07.48.png",
+        "IMG_8883_3-2.jpg",
+        "IMG_8652_3-1.jpg",
+        "IMG_8874_2-2.jpg",
+        "IMG_8655_2-1.jpg",
+        "IMG_8654_2-2.jpg",
+        "IMG_6498_2-1.jpg",
+        "IMG_6497_2-1.jpg",
       ],
     },
     {
@@ -345,6 +267,34 @@ export default function Work() {
         urban14,
         urban15,
       ],
+      filenames: [
+        "IMG_9656_2.jpg",
+        "IMG_9660_2.jpg",
+        "IMG_9663_2.jpg",
+        "Screenshot_2026-05-24_at_23.45.38.png",
+        "DSC05791.JPG",
+        "Screenshot_2026-05-24_at_23.46.18.png",
+        "Screenshot_2026-05-13_at_16.32.55.png",
+        "Screenshot_2026-05-13_at_16.33.06.png",
+        "Screenshot_2026-05-13_at_16.33.21.png",
+        "Screenshot_2026-05-13_at_16.34.20.png",
+        "Screenshot_2026-05-13_at_16.34.06.png",
+        "Screenshot_2026-05-13_at_16.37.30.png",
+        "Screenshot_2026-05-13_at_16.37.41.png",
+        "Screenshot_2026-05-13_at_16.36.20.png",
+        "Screenshot_2026-05-13_at_16.38.22.png",
+        "Screenshot_2026-05-13_at_16.38.34.png",
+        "Screenshot_2026-05-13_at_16.36.42.png",
+        "Screenshot_2026-05-13_at_16.39.11.png",
+        "Screenshot_2026-05-13_at_16.38.57.png",
+        "Screenshot_2026-05-13_at_16.35.48.png",
+        "Screenshot_2026-05-13_at_16.39.34.png",
+        "Screenshot_2026-05-13_at_16.39.52.png",
+        "Screenshot_2026-05-13_at_16.35.32.png",
+        "Screenshot_2026-05-13_at_16.41.00.png",
+        "Screenshot_2026-05-13_at_16.40.40.png",
+        "Screenshot_2026-05-13_at_16.36.08.png",
+      ],
     },
     {
       id: "mens-jeans-closed-redesign",
@@ -361,6 +311,17 @@ export default function Work() {
         jeans3,
         jeans4,
         jeans7,
+      ],
+      filenames: [
+        "Leo_vd_Oost-2.jpg",
+        "Leo_vd_Oost_1-2.jpg",
+        "Leo_vd_Oost_3-2.jpg",
+        "Leo_vd_Oost_2-2.jpg",
+        "IMG_0088.jpg",
+        "IMG_0091.jpg",
+        "Untitled_design-11.jpg",
+        "Untitled_design-12.jpg",
+        "jhb.png",
       ],
     },
     {
@@ -381,6 +342,19 @@ export default function Work() {
         sleeve10,
         sleeve11,
       ],
+      filenames: [
+        "Untitled_design-1.jpg",
+        "Untitled_design-3-1.jpg",
+        "Untitled_design-2-1.jpg",
+        "Untitled_design-4.jpg",
+        "Untitled_design-6.jpg",
+        "Untitled_design-5.jpg",
+        "Untitled_design-7.jpg",
+        "Untitled_design-8.jpg",
+        "Screenshot_2026-06-01_at_22.49.23.png",
+        "Screenshot_2026-06-01_at_22.48.56.png",
+        "Screenshot_2026-06-01_at_22.49.08.png",
+      ],
     },
     {
       id: "womens-trousers",
@@ -397,6 +371,17 @@ export default function Work() {
         fashion7,
         fashion8,
         fashion9,
+      ],
+      filenames: [
+        "IMG_8214_2.jpg",
+        "IMG_8212_2.jpg",
+        "IMG_8211_2.jpg",
+        "IMG_8198_3.jpg",
+        "IMG_8202_3.jpg",
+        "IMG_8201_4.jpg",
+        "IMG_8200_4.jpg",
+        "Screenshot_2026-06-01_at_19.44.26.png",
+        "Screenshot_2026-06-01_at_19.44.48.png",
       ],
     },
     {
@@ -418,6 +403,21 @@ export default function Work() {
         skirt11,
         skirt12,
         skirt13,
+      ],
+      filenames: [
+        "IMG_8111_2.jpg",
+        "tempImagegYuQXh.png",
+        "IMG_8112_2.jpg",
+        "IMG_8123_2.jpg",
+        "IMG_8120.jpg",
+        "IMG_8122_2.jpg",
+        "IMG_8121_2.jpg",
+        "IMG_8117_2.jpg",
+        "IMG_8119_2.jpg",
+        "IMG_8118_2.jpg",
+        "Screenshot_2026-06-01_at_19.56.38.png",
+        "Screenshot_2026-06-01_at_19.56.52.png",
+        "Screenshot_2026-06-01_at_19.48.10.png",
       ],
     },
     {
@@ -452,6 +452,34 @@ export default function Work() {
         pattern24,
         pattern25,
         pattern26,
+      ],
+      filenames: [
+        "Screenshot_2026-06-01_at_20.40.03.png",
+        "Screenshot_2026-06-01_at_20.40.17.png",
+        "Screenshot_2026-06-01_at_20.40.27.png",
+        "Screenshot_2026-06-01_at_20.40.40.png",
+        "Screenshot_2026-06-01_at_20.34.13-1.png",
+        "Screenshot_2026-06-01_at_20.34.30-1.png",
+        "Screenshot_2026-06-01_at_20.34.45-1.png",
+        "Screenshot_2026-06-01_at_20.41.00.png",
+        "Screenshot_2026-06-01_at_20.41.14.png",
+        "Screenshot_2026-06-01_at_20.41.27.png",
+        "Screenshot_2026-06-01_at_20.41.39.png",
+        "Screenshot_2026-06-01_at_20.46.45.png",
+        "Screenshot_2026-06-01_at_20.47.00.png",
+        "IMG_0113.PNG",
+        "IMG_0114.PNG",
+        "IMG_0115.PNG",
+        "IMG_0116.PNG",
+        "IMG_0117.PNG",
+        "IMG_0119.PNG",
+        "IMG_0122.PNG",
+        "IMG_0123.PNG",
+        "IMG_0124.PNG",
+        "IMG_0129.PNG",
+        "IMG_0126-1.PNG",
+        "IMG_0127.PNG",
+        "IMG_0128.PNG",
       ],
     },
   ];
@@ -553,6 +581,7 @@ export default function Work() {
               title={project.title}
               description={project.description}
               images={project.images}
+              filenames={project.filenames}
               scrollOffset={0}
               landscapeMode={project.title === "18th-century inspired stays"}
             />

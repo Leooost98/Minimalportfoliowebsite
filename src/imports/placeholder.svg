@@ -1,0 +1,6 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f5f0e8"/>
+  <text x="400" y="280" font-family="Arial" font-size="24" fill="#666" text-anchor="middle">Image Placeholder</text>
+  <text x="400" y="320" font-family="Arial" font-size="16" fill="#999" text-anchor="middle">Upload images to src/imports/ folder</text>
+  <text x="400" y="360" font-family="Arial" font-size="14" fill="#ccc" text-anchor="middle">See src/imports/README.md for required files</text>
+</svg>

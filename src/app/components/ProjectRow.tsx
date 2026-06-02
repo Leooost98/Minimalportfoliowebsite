@@ -6,18 +6,20 @@ interface ProjectRowProps {
   title: string;
   description: string;
   images: string[];
+  filenames?: string[];
   scrollOffset?: number;
   textAlign?: 'left' | 'right';
   landscapeMode?: boolean;
 }
 
-export function ProjectRow({ title, description, images, scrollOffset = 0, textAlign = 'left', landscapeMode = false }: ProjectRowProps) {
+export function ProjectRow({ title, description, images, filenames, scrollOffset = 0, textAlign = 'left', landscapeMode = false }: ProjectRowProps) {
   const { theme } = useTheme();
   const scrollRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const zoomContainerRef = useRef<HTMLDivElement>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
+  const [zoomedImageIndex, setZoomedImageIndex] = useState<number | null>(null);
   const [imageRect, setImageRect] = useState<DOMRect | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -38,14 +40,18 @@ export function ProjectRow({ title, description, images, scrollOffset = 0, textA
   //   }
   // }, []);
 
-  const handleImageClick = (image: string, e: React.MouseEvent<HTMLDivElement>) => {
+  const handleImageClick = (image: string, index: number, e: React.MouseEvent<HTMLDivElement>) => {
     if (zoomedImage) {
       setIsAnimating(false);
-      setTimeout(() => setZoomedImage(null), 300);
+      setTimeout(() => {
+        setZoomedImage(null);
+        setZoomedImageIndex(null);
+      }, 300);
     } else {
       const rect = e.currentTarget.parentElement!.getBoundingClientRect();
       setImageRect(rect);
       setZoomedImage(image);
+      setZoomedImageIndex(index);
       setTimeout(() => setIsAnimating(true), 10);
     }
   };
@@ -323,7 +329,7 @@ export function ProjectRow({ title, description, images, scrollOffset = 0, textA
               >
                 <ImageWithFallback
                   src={image}
-                  alt={`${title} - Image ${index + 1}`}
+                  alt={filenames?.[index] || `${title} - Image ${index + 1}`}
                   className="h-full w-auto object-contain"
                   loading={index < 3 ? "eager" : "lazy"}
                   onLoad={handleImageLoad}
@@ -339,7 +345,7 @@ export function ProjectRow({ title, description, images, scrollOffset = 0, textA
                       backgroundColor: 'transparent',
                       border: 'none',
                     }}
-                    onClick={(e) => handleImageClick(image, e)}
+                    onClick={(e) => handleImageClick(image, index, e)}
                   />
                 )}
               </div>
@@ -385,7 +391,7 @@ export function ProjectRow({ title, description, images, scrollOffset = 0, textA
             >
               <ImageWithFallback
                 src={zoomedImage}
-                alt="Zoomed image"
+                alt={zoomedImageIndex !== null && filenames?.[zoomedImageIndex] ? filenames[zoomedImageIndex] : "Zoomed image"}
                 className="w-full h-full object-contain"
               />
             </div>

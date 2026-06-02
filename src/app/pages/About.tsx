@@ -1,7 +1,11 @@
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { useTheme, themes, ThemeId, ABOUT_TEXT_COLOR } from "../context/ThemeContext";
-import profileImage from "../../imports/4b1fa4ff-c376-419a-a05e-42b04e80527e_2.jpg";
+
+// Placeholder until real image is uploaded
+import placeholder from "../../imports/placeholder.svg";
+// Original: import profileImage from "../../imports/4b1fa4ff-c376-419a-a05e-42b04e80527e_2.jpg";
+const profileImage = placeholder;
 
 export default function About() {
   const { theme, setThemeId } = useTheme();
@@ -90,7 +94,7 @@ export default function About() {
           <div className="w-full max-w-sm mx-auto">
             <ImageWithFallback
               src={profileImage}
-              alt="Profile"
+              alt="4b1fa4ff-c376-419a-a05e-42b04e80527e_2.jpg"
               className="w-full h-auto object-cover rounded-lg"
               loading="eager"
             />
