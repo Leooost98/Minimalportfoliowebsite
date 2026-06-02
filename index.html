@@ -1,22 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Portfolio Leo</title>
-      <meta name="description" content="Showcase creative work with a sleek, minimal portfolio featuring vertical and horizontal scrolling projects plus an about page with contact links." />
-      <meta name="robots" content="noindex, nofollow" />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-      
-    </head>
+<body>
 
-    <body>
-      
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-      
-    </body>
-  </html>
-  
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Your Name</h1>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Hi, I'm a Designer & Developer</h2>
+      <p>I create clean, modern websites and digital experiences.</p>
+      <a class="btn" href="#work">View My Work</a>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="grid">
+        <div class="card">Project One</div>
+        <div class="card">Project Two</div>
+        <div class="card">Project Three</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I’m a creative developer focused on building simple and effective web experiences.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: your@email.com</p>
+    </div>
+  </section>
+
+</body>
+</html>
